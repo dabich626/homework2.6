@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -14,6 +16,17 @@ public class Main {
     }
 
     private static void task4() {
+
+        List<String> strings = new ArrayList<>(List.of("один", "два","два", "три", "три", "три"));
+
+        System.out.println(ArrayList);
+
+        for(int i = 0; i < ArrayList.size(); i++){
+            if (countList(ArrayList, ArrayList.get(i)) == 1){
+                System.out.println("уникальные слова " + ArrayList.get(i));
+                System.out.println("повторы " + Collections.frequency(ArrayList, "два", "три"));
+            }
+        }
     }
 
     private static void task3() {
@@ -49,6 +62,8 @@ nums = nums + 2;
             System.out.println(nums);
         }
     }
+
+
     
     
 }
